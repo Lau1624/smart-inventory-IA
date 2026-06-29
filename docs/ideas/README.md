@@ -21,4 +21,5 @@
 #Integrar un sistema completo con IA
   -No solo en el stock, buscar implementar IA en otros aspectos, como una Herramienta para la toma de desiciones.
 
-#
+#inventario
+  -fecha_caducidad_producto (podria hacerlo por tandas, creo que muchas unidades de un mismo producto pueden tener fecha de vencimientos similares, por lo tanto aqui podria calcular una media entre unas fechas de           caducidad proximas, tener un promedio, para por lo menos poder avisar de que estan o proximas a vencer o ya vencieron, no un listado de cada unidad de producto, demaciados datos volatiles, todo el tiempo saliendo        (eliminando) y entrando esos datos, podriamos hacer por tandas o grupos de un mismo producto que estas tandas, serian "conjuntos de unidades" con fechas similares o muy proximas. Asociando unidades de productos con       estas tandas, para poder avisar de su caducidad y sabemos que tanda estan por vencer, si aun existen unidades de esta tanda que no se vendieron. Se podria aconsejar prioridad a estos a punto de vencer)
