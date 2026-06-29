@@ -1,4 +1,4 @@
-##Vision del proyecto:
+##Vision del proyecto: {28-06-2026} (ultima actualizacion)
  #Realizar un sistema de inventario, que integre el uso de IA con el fin de facilitar el control y la toma de desiciones, y que estas ultimas ayuden de forma estrategica al comercio.
   -Principios del proyecto:
     >Eficiente.
