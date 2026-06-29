@@ -1,5 +1,5 @@
 ##Vision del proyecto:
- #Realizar un sistema de inventario y finanzas, que integre el uso de IA con el fin de facilitar el control y la toma de desiciones, y que estas ultimas ayuden de forma estrategica al comercio.
+ #Realizar un sistema de inventario, que integre el uso de IA con el fin de facilitar el control y la toma de desiciones, y que estas ultimas ayuden de forma estrategica al comercio.
   -Principios del proyecto:
     >Eficiente.
     >Escalable.
