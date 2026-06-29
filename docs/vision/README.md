@@ -6,7 +6,9 @@
     >Util (resuelve problemas claros e integra oportunidades de mejoras de procesos).
     >Modularidad.
     >Aprendizaje.
-
+    >Simplicidad (implementar la solucion mas simple que resulva los requerimientos)
+    >Capacidad de evolucionar del sistema.
+    
     
   #Vision a futuro:
     -Se busca construir una plataforma capaz de evolucionar con el tiempo, incorporando nuevos módulos y herramientas de análisis que permitan asistir al usuario en la gestión de su negocio.
