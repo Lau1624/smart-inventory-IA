@@ -1,19 +1,40 @@
 ##Entidades
-  #Persona
+  #Persona (empleado, cliente)
     dni
     cuit
     nombre
     apellido
     fecha nacimiento
     
+##inventario
   #Producto
-    Posibles atributos
-    id
+    idproducto
     denominación
-    código de barras
-    tipo de trazabilidad
     estado
 
-  #lotes
-  #facuturas
+  #detalleproducto
+    idproducto
+    tipoventa
+    categoria
+    
+  #categoria
+    id
+    categoriaproducto
+    
+  #tipoventa
+    id
+    unidad
+    
+        
+  #unidad
+    id 
+    unidadtipo (grm, kg, metro, etc)
   
+  #lotes
+    idlote
+    
+##Finanzas 
+  #facturas
+    idfactura
+
+  ##
