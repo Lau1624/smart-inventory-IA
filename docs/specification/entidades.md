@@ -9,12 +9,12 @@
     domicilio(string)
 
   #cliente
-    dni fk
+    idpersona fk
     puntos (float)
-    niveldebeneficios fk
+    idnivel fk
     
   #empleado
-    dni fk
+    idpersona fk
     
   #rolempleado
     dni fk
@@ -74,6 +74,12 @@
   #beneficios
     idbeneficio 
     descripcionbeneficio(string)
+    idtipobeneficio fk
+    valor (float)
+    
+  #tipobeneficio
+    idtipobeneficio
+    descripcion (string)
     
   #organizacion 
     idorganizacion pk
@@ -130,14 +136,13 @@
     fecha
     cantidadproducida
   
-  #movimientoventas
+  #movimientoinventario
     idmovimiento
     idlote fk
     idtipomovimiento fk
     cantidad
-    fechaingreso
+    fecha
     idventa fk null
-    idpedido FK NULL
     idlocal_destino FK NULL
     idempleado fk
     observacion null
@@ -169,18 +174,16 @@
     ubicacion(string)
     idlocales fk
     
-  #zonaalmacenamiento (cada almacen tiene espacios reservados, donde puede abarcar x cantidad de x unidad)
-    idcapacidad
-    idalmacen
+  #zonaalmacenamiento
+    idzona PK
+    idalmacen FK
+    capacidad (float)
+    idunidad FK
     
   #capacidadmaxima
     idcapacidad
     capacidad 
     unidad fk
-    
-  #inventario
-    idinventario
-    idlocal fk
 
   #lotexgondola
     id
@@ -200,7 +203,7 @@
     descripcion
     
   #sector
-    idSector 
+    idsector 
     numero
     descripcion(string)
     idlocal fk
