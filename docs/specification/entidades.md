@@ -1,24 +1,36 @@
 ##Entidades
   #persona (empleado, cliente)
+    idpersona
     dni
     nombre (string)
     apellido (string)
     fecha nacimiento (date)
-    roldepersona fk
-    puntos (float)
-    niveldebeneficios
     contacto(numerico)
     domicilio(string)
+
+  #cliente
+    dni fk
+    puntos (float)
+    niveldebeneficios fk
+    
+  #empleado
+    dni fk
+    
+  #rolempleado
+    dni fk
+    idrol fk
+    fechainicio
+    fechafinal
+    
+  #rolelaboral
+    idrol
+    roldescripcion (string)
     
   #proveedores
-    cuit
-    contacto(numerico)
-    ubicacion(string)
+    idorganizacion fk 
     
   #distribuidores
-    iddistruibuidor
-    contacto(numerico)
-    direccion(string)
+    idorganizacion fk 
     
   #pedidoproducto (Existe para rastrear el proveedor del lote) (posibilidad de unir el modulo financiero con el modulo de inventario)
     idpedido
@@ -26,31 +38,54 @@
     iddistribuidor fk
     fechapedido
     fechaingreso
+    idlocal fk
     
   #detallepedido
+    iddetalle
     idpedido fk
     idproducto fk
     precio
     cantidadrecibida (aquel que se utilzara en lotes)
     cantidadsolicitada (dato por posible reclamo)
     
+  #franquicia
+    idfranquicia 
+    razonsocial
+    cuit (unique)
+    contacto
+    fechainiciocontrato
+    fechafincontrato NULL
+    
   #locales
     idlocal
     contacto(numerico)
     direccion(string)
-  
+    idfranquicia
+    
   #nivelesbeneficios
-    idbeneficio fk 
-    tipobeneficio(string)
+    idnivel 
+    nivel(string)
     descripcion(string)
     
-  #roles
-    idrol
-    rol (string)
+  #beneficioxnivel
+    idnivel fk
+    idbeneficio fk
+    
+  #beneficios
+    idbeneficio 
+    descripcionbeneficio(string)
+    
+  #organizacion 
+    idorganizacion pk
+    cuit (unique)
+    razonsocial (string)
+    contacto (numerico)
+    ubicacion (string)
   
 ##inventario
   #producto
-    idproducto (codigo de barra) (unico)
+    idproducto 
+    codigodebarra
     denominación (string)
     estado (bool)
     tipoventa fk
@@ -62,17 +97,17 @@
     fechadesde
     fechahasta
     precio
+    idlocal fk
     
   #categoria
-    id
-    categoriaxproducto(string)
+    idcategoria
+    nombre(string)
+    idcategoriapadre fk null
     
   #tipoventa
     idtipoventa
     unidad fk
     nombre
-    permitedecimales(bool)
-    requierepeso(bool)
     
   #unidad
     idunidad
@@ -80,20 +115,64 @@
   
   #lotes
     idlote
-    iddetallepedido fk
+    iddetallepedido fk null
+    idordenproduccion fk null
+    idproducto fk
     stock (float) (por ahora asi, ya que necesito medir kg, metro, unidad)
-    fechaingreso
-    idalmacen
+    idalmacen fk
     fechavencimiento
+
+  #ordenproduccion
+    idordenproduccion pk
+    idlocal
+    idproducto fk
+    idempleado fk
+    fecha
+    cantidadproducida
+  
+  #movimientoventas
+    idmovimiento
+    idlote fk
+    idtipomovimiento fk
+    cantidad
+    fechaingreso
+    idventa fk null
+    idpedido FK NULL
+    idlocal_destino FK NULL
+    idempleado fk
+    observacion null
+
+  #tipomovimiento
+    idtipomovimiento
+    nombretipo (string)
+    signo(+1/ -1)
     
+  #conteoinventario
+    idconteo 
+    idlocal fk
+    idsector fk null
+    fechainicio
+    fechacierre null
+    estado (boole)
+
+  #conteoempleado
+    idconteo fk
+    idlempleado fk
+
+  #detalleconteo
+    idconteo fk
+    idlote fk
+    cantidadcontada
+  
   #almacenes
     idalmacen
     ubicacion(string)
-      
-  #capacidadxalmacen (cada almacen tiene espacios reservados, donde puede abarcar x cantidad de x unidad)
+    idlocales fk
+    
+  #zonaalmacenamiento (cada almacen tiene espacios reservados, donde puede abarcar x cantidad de x unidad)
     idcapacidad
     idalmacen
-
+    
   #capacidadmaxima
     idcapacidad
     capacidad 
@@ -112,9 +191,10 @@
   #gondola (asignacion de productos en gondolas, con un orden en sectores para que pueda existir un "mapa" para los clientes, conservando el orden)
     idgondola
     sector fk
-    capacidadproductos
+    capacidad (float)
     tipogondola fk
-    
+    unidad fk
+      
   #tipogondola
     idtipogondola
     descripcion
@@ -123,7 +203,7 @@
     idSector 
     numero
     descripcion(string)
-    
+    idlocal fk
     
 ##Finanzas 
   #facturas
