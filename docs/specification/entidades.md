@@ -1,6 +1,6 @@
 ##Entidades
   #persona (empleado, cliente)
-    idpersona
+    idpersona (si una persona es del extranjero no posee dni)
     dni
     nombre (string)
     apellido (string)
@@ -17,7 +17,7 @@
     idpersona fk
     
   #rolempleado
-    dni fk
+    idempleado fk (idpersona)
     idrol fk
     fechainicio
     fechafinal
@@ -135,6 +135,9 @@
     idempleado fk
     fecha
     cantidadproducida
+
+  #reposicion
+    
   
   #movimientoinventario
     idmovimiento
@@ -162,28 +165,24 @@
 
   #conteoempleado
     idconteo fk
-    idlempleado fk
+    idempleado fk
 
   #detalleconteo
     idconteo fk
     idlote fk
     cantidadcontada
-  
+    cantidadsistema
+    
   #almacenes
     idalmacen
     ubicacion(string)
-    idlocales fk
+    idlocal fk
     
   #zonaalmacenamiento
     idzona PK
     idalmacen FK
     capacidad (float)
     idunidad FK
-    
-  #capacidadmaxima
-    idcapacidad
-    capacidad 
-    unidad fk
 
   #lotexgondola
     id
