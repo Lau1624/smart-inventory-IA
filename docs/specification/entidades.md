@@ -56,13 +56,13 @@
     fechainiciocontrato
     fechafincontrato NULL
     
-  #locales
+  #local
     idlocal
     contacto(numerico)
     direccion(string)
     idfranquicia
     
-  #nivelesbeneficios
+  #nivelbeneficio
     idnivel 
     nivel(string)
     descripcion(string)
@@ -71,7 +71,7 @@
     idnivel fk
     idbeneficio fk
     
-  #beneficios
+  #beneficio
     idbeneficio 
     descripcionbeneficio(string)
     idtipobeneficio fk
@@ -153,7 +153,7 @@
   #tipomovimiento
     idtipomovimiento
     nombretipo (string)
-    signo(+1/ -1)
+    signofijo(int null )(+1/ -1)
     
   #conteoinventario
     idconteo 
