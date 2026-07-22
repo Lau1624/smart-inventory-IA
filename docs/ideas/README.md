@@ -23,3 +23,22 @@
 
 #inventario
   -fecha_caducidad_producto (podria hacerlo por tandas, creo que muchas unidades de un mismo producto pueden tener fecha de vencimientos similares, por lo tanto aqui podria calcular una media entre unas fechas de           caducidad proximas, tener un promedio, para por lo menos poder avisar de que estan o proximas a vencer o ya vencieron, no un listado de cada unidad de producto, demaciados datos volatiles, todo el tiempo saliendo        (eliminando) y entrando esos datos, podriamos hacer por tandas o grupos de un mismo producto que estas tandas, serian "conjuntos de unidades" con fechas similares o muy proximas. Asociando unidades de productos con       estas tandas, para poder avisar de su caducidad y sabemos que tanda estan por vencer, si aun existen unidades de esta tanda que no se vendieron. Se podria aconsejar prioridad a estos a punto de vencer)
+
+##eventos
+  #lista
+  
+    -Un cliente-(1)
+    1.1.Compra productos.
+    1.2.Devuelve productos.
+    1.3.Pide delibery.
+    1.4.Hace un pedido para buscar.
+    1.5.utilia puntos para canjear premio
+    -Un empleado-(2)
+    2.1.Realiza un conteo de inventario.
+    2.2.Repone productos en gondola.
+    2.3.Cocina producto.
+    2.4.Ingresa producto en almacen
+    -Un gerente-(3)
+    3.1.Asigna tareas.
+    3.2.
+  
