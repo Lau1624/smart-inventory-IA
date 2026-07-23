@@ -30,9 +30,7 @@
     -Un cliente-(1)
     1.1.Compra productos.
     1.2.Devuelve productos.
-    1.3.Pide delibery.
-    1.4.Hace un pedido para buscar.
-    1.5.utilia puntos para canjear premio
+    1.3.Hace un pedido, para buscar o delibery.
     -Un empleado-(2)
     2.1.Realiza un conteo de inventario.
     2.2.Repone productos en gondola.
@@ -41,4 +39,18 @@
     -Un gerente-(3)
     3.1.Asigna tareas.
     3.2.
-  
+
+  #acontecimientos por eventos
+    
+    -cliente-(1)
+    1.1. Un cliente envia una lista de productos (para su compra) esta lista se compone de, producto y cantidad, a la hora de escanear el codigo de barra de un producto, suma la cantidades de productos del mismo tipo, se verifica su precio y se cobra, el cliente dispone de multiple metodos de pago, QR, tarjeta, efectivo, en caso de efectivo el personal debera validar la transferencia. 
+    1.2. Un cliente encuentra un vencimiento, falla o simplemente desea devolver el producto, si posee el ticket correspondiente y el producto esta en optimas condiciones, el producto caduco o la falla del producto tenia garantia, se devuelve el monto acordado, un porcentaje del total o la completitud de la compra. Y se descarta este producto si no esta en optimas condiciones.
+    1.3. Un cliente entra a la pagina web o aplicacion para realizar una lista de productos para su reserva, para busqueda o delibery. Existe un limite del cual se pueden reservar sin hacer delibery directo. Si el cliente desea comprar "mayorista" este limite se amplia pero la reserva se debera de realizar con tiempo para el retiro o flete del pedido.
+    -empleado-(2)
+    2.1. Un empleado realiza el conteo de inventario, puede ser por sector o completo, la finalidad de eeste es controlar el inventario y realizar ajustes para mantener el sistema de logistica lo mas exacto posible. Se tomara un listado por sector y producto, de estos la cantidad contada al menos proxima, de esto se determinara si existe una diferencia significativa como para ajustar el inventario del sistema o control el stock o posibles robos.
+    2.2. Un empleado repone productos en gondolas asignadas, estos productos se obtienen de los lotes y se hara una salida de inventario a las gondolas en formato fifo con prioridad a los productos con fechas de vencimiento mas cercanos que contengan plazos de vencimientos sostenibles, no aquellos productos que estan muy cercanos a vencer y tienen probabilidades mas altas de dejar una mancha en la reputacion de la empresa, Se daran recomendaciones en caso de que se encuentre existencias a punto de caducar.
+    2.3. Un empleado cocina comida para el sector de alimentos frescos (pollos, ensaladas, carnes, empanadas, etc.).
+    2.4. Un empleado ingresa cargas de productos o lotes al almacen para su almacenamiento y logistica.
+    -Gerente-(3)
+    3.1. Asignacion de tareas laborales como conteos, lavados de sectores, seguridad, etc.
+    
