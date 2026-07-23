@@ -36,9 +36,13 @@
     2.2.Repone productos en gondola.
     2.3.Cocina producto.
     2.4.Ingresa producto en almacen
+    2.5.
     -Un gerente-(3)
     3.1.Asigna tareas.
-    3.2.
+    3.2.Realiza pedidos de cotizacion
+    3.3.Realiza pedidos de productos
+    3.4.Realiza pedidos de insumos
+    3.5.
 
   #acontecimientos por eventos
     
