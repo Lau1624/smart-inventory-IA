@@ -1,8 +1,9 @@
 ##Se va a realizar una arquitectura del proyecto compuesta por:
   #Capa visual (front end) 
-    HTML + CSS 
+    javafx + css
+    
   #Capa conexión
   
   #Capa lógica (back end)
-    Python + fastApi + PostgreSQL
+    Java + spring boot 
     
