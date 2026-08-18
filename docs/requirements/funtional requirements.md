@@ -27,3 +27,7 @@ El sistema deberá generar reportes. RF-005.001
 
 ## Auditoría RF-006
 El sistema deberá conservar el historial de operaciones. RF-006.001
+
+## Usuarios
+El sistema deberia controlar y autenticar el ingreso de usuarios.
+Debera encriptar las contras;as
