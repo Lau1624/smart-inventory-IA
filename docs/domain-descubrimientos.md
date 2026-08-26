@@ -26,4 +26,9 @@ En una organización interactúan distintos actores:
 - Distribuidores.
 - Terceros.
 
+##Login
+    -Inicio de sesion.
+    -Roles -> Responden funciones en base roles.
+    
+
 Cada uno puede participar en distintos procesos del negocio.
